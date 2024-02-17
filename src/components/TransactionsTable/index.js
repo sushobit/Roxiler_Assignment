@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { API } from "../../global";
+import BarChart from '../TransactionsBarChart/index.js'
 import './index.css'
 function TransactionsTable() {
   let [month, setMonth] = useState("March");
@@ -60,11 +61,11 @@ function TransactionsTable() {
           <select className="inputst" onChange={(e) => setMonth(e.target.value)}>
             <option value={"January"}>January </option>
             <option value={"February"}>February</option>
-            <option value={"March"} > March</option>
+            <option value={"March"}selected > March</option>
             <option value={"April"}>April</option>
             <option value={"May"}>May</option>
             <option value={"June"}>June</option>
-            <option value={"July"} selected>July</option>
+            <option value={"July"} >July</option>
             <option value={"August"}>August</option>
             <option value={"September"}>September</option>
             <option value={"October"}>October</option>
@@ -136,6 +137,7 @@ function TransactionsTable() {
           Total Not Sold Items :<span>{notSold}</span>
         </h3>
       </div>
+      <BarChart/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .cardcontainer {
     padding: 30px;
+    background-color: aliceblue;
 }
 
 .selectsection {
@@ -28,22 +29,23 @@
     font-weight: 900;
     width: 330px;
     border-width: 6px;
-    background-color: rgb(39, 194, 45);
-    color: white;
+    color: rgb(26, 115, 204);
 }
 
 .table-display {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px; 
-    background-color: rgb(193, 165, 11);
+    background-color: rgb(233, 209, 73);
     text-align: center;
+    border-radius: 20px;
   }
   
   .table-display th, .table-display td {
-    border: 1px solid ;
+    border: 2px solid ;
     padding: 10px;
     text-align: left;
+    border-radius: 20px;
   }
    
   .table-display tr:hover {
@@ -59,7 +61,7 @@
   }
 
 .Statistics {
-    background-color: rgb(193, 165, 11);
+    background-color: rgb(233, 209, 73);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

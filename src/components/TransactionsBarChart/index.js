@@ -35,11 +35,12 @@ export const options = {
   },
 };
 
-export function BarChart() {
+const BarChart = (props) => {
   const [barChartData, setBarChartData] = useState({});
   const [data, setData] = useState([]);
   const [lab, setLab] = useState([]);
   const [month, setMonth] = useState("March");
+  
 
   useEffect(() => {
     async function fetchBarChartData() {
@@ -66,11 +67,12 @@ export function BarChart() {
     <div>
       <div className="cardgraphcontainer">
         <div className="select">
+        
           <select className="inputst" onChange={(e) => setMonth(e.target.value)}>
             {/* Use defaultValue instead of selected */}
             <option value={"January"}>January</option>
             <option value={"February"}>February</option>
-            <option value={"March"} defaultValue>
+            <option value={"March"} selected>
               March
             </option>
             <option value={"April"}>April</option>
@@ -98,7 +100,7 @@ export function BarChart() {
             {
               label: "Number of Items",
               data: data,
-              backgroundColor: "blue",
+              backgroundColor: "lightblue",
             },
           ],
         }}
